@@ -1,5 +1,14 @@
 from tkinter import *
 
+'''
+Reportes
+[1] Mostrar trabajadores Activos
+[2] Mostrar trabajadores desocupados
+[3] Mostrar desocupados en un rango de edad
+[4] Mostrar trabajadores según la profesión
+[0] Volver al menú principal
+'''
+
 class ConsultoraReportes:
     def __init__(self):
         self.root=Tk()
@@ -7,20 +16,23 @@ class ConsultoraReportes:
         self.root.resizable(0,0)
         #self.root.geometry("380x350")
 
-        self.labelBienvenida = Label(self.root, text="Bienvenido")
-        self.labelBienvenida.grid(column=0,row=0,columnspan=4)
+        self.labelBienvenidaReportes = Label(self.root, text="Bienvenido")
+        self.labelBienvenidaReportes.grid(column=0,row=0,columnspan=5)
         
-        self.botonGestion = Button(self.root, text="Gestion de trabajadores")
-        self.botonGestion.grid(column=0,row=2,sticky=S+N+E+W)
+        self.botonTrabajadoresActivos = Button(self.root, text="Mostrar trabajadores Activos")
+        self.botonTrabajadoresActivos.grid(column=0,row=2,sticky=S+N+E+W)
 
-        self.botonReportes = Button(self.root, text="Reportes")
-        self.botonReportes.grid(column=1,row=2,sticky=S+N+E+W)
+        self.botonTrabajadoresDesocupados = Button(self.root, text="Mostrar trabajadores desocupados")
+        self.botonTrabajadoresDesocupados.grid(column=1,row=2,sticky=S+N+E+W)
         
-        self.botonStatus = Button(self.root, text="Cambiar status trabajador")
-        self.botonStatus.grid(column=2,row=2,sticky=S+N+E+W)
+        self.botonDesocupadosEdad = Button(self.root, text="Mostrar desocupados en un rango de edad")
+        self.botonDesocupadosEdad.grid(column=2,row=2,sticky=S+N+E+W)
 
-        self.botonSalir = Button(self.root, text="Salir", command= self.root.destroy)
-        self.botonSalir.grid(column=3,row=2,sticky=S+N+E+W)
+        self.botonProfesion = Button(self.root, text="Mostrar trabajadores según la profesión", command= self.root.destroy)
+        self.botonProfesion.grid(column=3,row=2,sticky=S+N+E+W)
+
+        self.botonVolver = Button(self.root, text="Volver al menú principal", command= self.root.destroy)
+        self.botonVolver.grid(column=4,row=2,sticky=S+N+E+W)
 
         self.root.mainloop()
             
